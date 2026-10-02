@@ -1,0 +1,17 @@
+# Espejo espejo_C: D=8.3 mm, FOV vert=68.7 deg, codo=-30.0 deg, tope=5.0 deg, centro=0.15, u_tope=212.0 px, R=12.0 mm
+# r desde el eje, z desde el vertice hacia la ceja (mm). Ceja: R=12.7 mm, espesor 1.0 mm
+
+Tramo 1, 0 <= r <= 0.769154 mm (propio robot, vertice):
+  z(r) = (3.181992934917e-01)*r^2 + (1.545713076714e-02)*r^4 + (6.290006243920e-04)*r^6
+
+Tramo 2, 0.769154 <= r <= 12.0 mm (banda util):
+  z(r) = (1.937737430088e-01)*(r-0.769154)^0 + (5.187147788330e-01)*(r-0.769154)^1 + (6.940082788417e-03)*(r-0.769154)^2 + (6.118937207507e-05)*(r-0.769154)^3 + (2.854057709505e-05)*(r-0.769154)^4 + (-4.864536720808e-06)*(r-0.769154)^5 + (2.837722512333e-07)*(r-0.769154)^6 + (-6.172821710290e-09)*(r-0.769154)^7
+
+Error maximo del ajuste frente al perfil integrado: 0.0099 um
+
+Inventor: dos Curvas de ecuacion explicitas en un boceto 2D (plano XZ), unidas en el codo:
+  curva 1: x(t) = t, y(t) = (3.181992934917e-01)*t^2 + (1.545713076714e-02)*t^4 + (6.290006243920e-04)*t^6, t de 0 a 0.769154
+  curva 2: x(t) = t, y(t) = (1.937737430088e-01)*(t-0.769154)^0 + (5.187147788330e-01)*(t-0.769154)^1 + (6.940082788417e-03)*(t-0.769154)^2 + (6.118937207507e-05)*(t-0.769154)^3 + (2.854057709505e-05)*(t-0.769154)^4 + (-4.864536720808e-06)*(t-0.769154)^5 + (2.837722512333e-07)*(t-0.769154)^6 + (-6.172821710290e-09)*(t-0.769154)^7, t de 0.769154 a 12.0
+  y luego cerrar el perfil con la ceja y revolucionar alrededor del eje Y del boceto.
+
+Altura en el borde: z(12.0) = 6.9966 mm; con la ceja el espejo mide 7.9966 mm de alto y 25.40 mm de diametro.

@@ -1,0 +1,4 @@
+blend/*.blend1
+__pycache__/
+*.pyc
+*.FCBak
